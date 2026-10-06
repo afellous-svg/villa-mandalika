@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,9 +61,9 @@
 
 /* ============ TOKENS (charte Villa Mandalika) ============ */
 :root{
-  --bg:#F6F3EF;        /* beige latté */
-  --bg-2:#ECE6DD;      /* sable clair */
-  --surface:#FBFAF7;
+  --bg:#FFFFFF;        /* blanc lumineux */
+  --bg-2:#F4F1EC;      /* beige très clair */
+  --surface:#FFFFFF;
   --ink:#3A332C;       /* taupe foncé (remplace le noir) */
   --ink-soft:#6E655B;
   --muted:#8C8C8C;     /* gris */
@@ -656,7 +656,7 @@ footer{background:#222120;color:#D8D0C6;padding:64px 0 28px;}
   function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;}
   var saved=null;try{saved=localStorage.getItem('vm-theme');}catch(e){}
   function apply(t){if(t){root.setAttribute('data-theme',t);}else{root.removeAttribute('data-theme');}var dark=t?t==='dark':sysDark();tBtn.innerHTML=dark?sun:moon;}
-  apply(saved);
+  apply(saved||'light');
   tBtn.addEventListener('click',function(){var cur=root.getAttribute('data-theme')||(sysDark()?'dark':'light');var next=cur==='dark'?'light':'dark';apply(next);try{localStorage.setItem('vm-theme',next);}catch(e){}});
 
   var hdr=document.getElementById('hdr');
