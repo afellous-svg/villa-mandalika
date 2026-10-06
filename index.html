@@ -82,7 +82,7 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#24201B; --bg-2:#2B2621; --surface:#2E2924;
+    --bg:#1B1A18; --bg-2:#222120; --surface:#272624;
     --ink:#F2ECE2; --ink-soft:#C6BCAF; --muted:#9a9186;
     --sand:#E6C9AF; --sand-deep:#E6C9AF; --taupe:#C3B8AC; --powder:#4a443c;
     --line:rgba(242,236,226,.16); --line-soft:rgba(242,236,226,.08);
@@ -222,13 +222,13 @@ header.solid .burger span{background:var(--ink);}
 .gallery .h2{grid-row:span 2;}
 
 /* ============ ACCÈS ============ */
-.loc-wrap{background:#2B2621;color:#F2ECE2;}
+.loc-wrap{background:#222120;color:#F2ECE2;}
 .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,70px);align-items:center;}
 .loc-grid .eyebrow{color:var(--sand);}
 .loc-grid h2{color:#fff;font-size:clamp(2.1rem,4.4vw,3.2rem);margin:.2em 0 .5em;}
 .loc-grid .intro{opacity:.85;max-width:46ch;}
 .dist{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:4px;overflow:hidden;}
-.dist li{background:#322C26;padding:19px 22px;display:flex;flex-direction:column;gap:3px;}
+.dist li{background:#2A2927;padding:19px 22px;display:flex;flex-direction:column;gap:3px;}
 .dist li .km{font-family:var(--serif);font-size:1.6rem;color:var(--sand);line-height:1;}
 .dist li .pl{font-family:var(--sans);font-size:13px;opacity:.85;}
 .map-card{border-radius:5px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12);}
@@ -275,7 +275,7 @@ form .btn{width:100%;margin-top:8px;}
 form .note{font-size:12px;color:var(--muted);text-align:center;margin-top:13px;}
 
 /* ============ FOOTER ============ */
-footer{background:#2B2621;color:#D8D0C6;padding:64px 0 28px;}
+footer{background:#222120;color:#D8D0C6;padding:64px 0 28px;}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start;}
 .foot-brand .logo{color:#fff;align-items:flex-start;}
 .foot-brand .logo .top{justify-content:flex-start;}
@@ -329,7 +329,7 @@ footer{background:#2B2621;color:#D8D0C6;padding:64px 0 28px;}
   .hero .cta-row{flex-direction:column;}
   .hero .cta-row .btn{width:100%;}
 }
-.mnav{position:fixed;inset:0;z-index:95;background:#2B2621;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.4,0,.2,1);}
+.mnav{position:fixed;inset:0;z-index:95;background:#222120;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.4,0,.2,1);}
 .mnav.on{transform:none;}
 .mnav a{font-family:var(--serif);font-size:1.8rem;color:#fff;}
 .mnav a:hover{color:var(--sand);}
@@ -419,19 +419,19 @@ footer{background:#2B2621;color:#D8D0C6;padding:64px 0 28px;}
   <div class="wrap">
     <div class="section-head center rv">
       <span class="eyebrow">L'art de recevoir</span>
-      <h2>Festif, professionnel ou familial.</h2>
+      <h2>Familial, professionnel ou festif.</h2>
       <p>Un même lieu, trois façons d'en profiter — toujours sur-mesure, selon votre projet.</p>
     </div>
     <div class="exp">
       <article class="card rv d1">
-        <div class="ph"><img src="photos/soiree.jpg" alt="Espace de réception en soirée" loading="lazy"></div>
+        <div class="ph"><img src="photos/chambre-master.jpg" alt="Suite parentale pour séjour en famille" loading="lazy"></div>
         <div class="body">
-          <h3>Événements privés</h3>
-          <p>Anniversaires, baptêmes, baby showers, EVJF / EVG, retrouvailles… Le décor élégant de vos plus beaux moments.</p>
+          <h3>Séjours en famille</h3>
+          <p>Un week-end ou des vacances à 14, au calme et tout près des attractions d'Île-de-France.</p>
           <ul class="feat">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Grands espaces & parc privatif</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Salle de jeux, billard, baby-foot, cinéma</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ambiance lumineuse pour vos soirées</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>5 chambres · jusqu'à 14 personnes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Piscine intérieure chauffée & jacuzzi</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Proche Paris & Disneyland</li>
           </ul>
         </div>
       </article>
@@ -448,14 +448,14 @@ footer{background:#2B2621;color:#D8D0C6;padding:64px 0 28px;}
         </div>
       </article>
       <article class="card rv d3">
-        <div class="ph"><img src="photos/chambre-master.jpg" alt="Suite parentale pour séjour en famille" loading="lazy"></div>
+        <div class="ph"><img src="photos/soiree.jpg" alt="Espace de réception en soirée" loading="lazy"></div>
         <div class="body">
-          <h3>Séjours en famille</h3>
-          <p>Un week-end ou des vacances à 14, au calme et tout près des attractions d'Île-de-France.</p>
+          <h3>Événements privés</h3>
+          <p>Anniversaires, baptêmes, baby showers, EVJF / EVG, retrouvailles… Le décor élégant de vos plus beaux moments.</p>
           <ul class="feat">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>5 chambres · jusqu'à 14 personnes</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Piscine intérieure chauffée & jacuzzi</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Proche Paris & Disneyland</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Grands espaces & parc privatif</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Salle de jeux, billard, baby-foot, cinéma</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ambiance lumineuse pour vos soirées</li>
           </ul>
         </div>
       </article>
