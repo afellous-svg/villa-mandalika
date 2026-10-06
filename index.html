@@ -267,6 +267,15 @@ header.solid .burger span{background:var(--ink);}
 .cal-upd{text-align:center;font-size:11.5px;color:var(--muted);margin:16px 0 0;}
 @media(max-width:620px){.cal-months{grid-template-columns:1fr;}}
 
+/* ============ VIDÉO ============ */
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:720px;margin:44px auto 0;}
+.vid{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);}
+.vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;}
+.vid .vcap{padding:14px 16px;display:flex;flex-direction:column;gap:2px;}
+.vid .vcap b{color:var(--ink);font-family:var(--serif);font-weight:600;font-size:15px;}
+.vid .vcap span{font-size:12.5px;color:var(--muted);}
+@media(max-width:560px){.video-grid{grid-template-columns:1fr;max-width:360px;}}
+
 /* ============ AVIS ============ */
 .avis{text-align:center;}
 .rating{display:inline-flex;align-items:baseline;gap:10px;margin:8px 0 2px;}
@@ -542,6 +551,31 @@ footer{background:#222120;color:#D8D0C6;padding:64px 0 28px;}
       <figure><img src="photos/bain.jpg" alt="Salle de bains" loading="lazy"></figure>
       <figure><img src="photos/chambre-rose.jpg" alt="Chambre lumineuse" loading="lazy"></figure>
       <figure><img src="photos/parc.jpg" alt="Le parc vu du ciel" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VISITE EN VIDÉO -->
+<section class="pad" id="videos">
+  <div class="wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">En mouvement</span>
+      <h2>La villa en vidéo.</h2>
+      <p style="max-width:52ch;margin:0 auto;color:var(--ink-soft)">Quelques instants filmés sur place — l'esprit des lieux, le parc et le spa au soleil.</p>
+    </div>
+    <div class="video-grid rv d1">
+      <div class="vid">
+        <video controls playsinline muted preload="metadata" poster="video/poster-visite.jpg">
+          <source src="video/visite-villa.mp4" type="video/mp4">
+        </video>
+        <div class="vcap"><b>Visite de la villa</b><span>Façade, terrasse &amp; intérieurs</span></div>
+      </div>
+      <div class="vid">
+        <video controls playsinline muted preload="metadata" poster="video/poster-spa.jpg">
+          <source src="video/spa-jardin.mp4" type="video/mp4">
+        </video>
+        <div class="vcap"><b>Le spa au jardin</b><span>Détente au soleil, face au parc</span></div>
+      </div>
     </div>
   </div>
 </section>
