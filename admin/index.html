@@ -5403,6 +5403,8 @@ function buildContratPdfDef(d){
   c.push(field('Société', 'ST EVENTS'));
   c.push(field('Siège social', bailleur.adresse || '60 rue de Bellechasse, 75007 Paris'));
   if(bailleur.siret) c.push(field('SIRET', bailleur.siret));
+  c.push(field('Téléphone', '06 61 05 96 20'));
+  c.push(field('Email', 'contact@villa-mandalika.fr'));
 
   c.push({ text: 'Le Preneur', color: NAVY, bold: true, fontSize: 11, margin: [0, 16, 0, 4] });
   if(d.societe){
