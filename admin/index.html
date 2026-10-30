@@ -5686,7 +5686,7 @@ function buildContratPdfDef(d){
   // (voir buildEtatDesLieuxPdfDef plus bas)
 
   return {
-    info: { title: `Contrat ST EVENTS — ${d.nom}`, author: 'ST EVENTS' },
+    info: { title: `Contrat Villa Mandalika — ${d.nom}`, author: 'Villa Mandalika' },
     content: c,
     defaultStyle: { fontSize: 10, alignment: 'justify', lineHeight: 1.45, color: '#2a3344' },
     pageMargins: [55, 65, 55, 75],
@@ -5696,7 +5696,7 @@ function buildContratPdfDef(d){
       return {
         margin: [55, 25, 55, 0],
         columns: [
-          { text: 'ST EVENTS', color: NAVY, fontSize: 9, bold: true, characterSpacing: 3, width: '*' },
+          { text: 'VILLA MANDALIKA', color: NAVY, fontSize: 9, bold: true, characterSpacing: 3, width: '*' },
           { text: 'Contrat de location saisonnière', color: SOFT, fontSize: 8, italics: true, alignment: 'right', width: 'auto' }
         ]
       };
@@ -5913,7 +5913,7 @@ function buildEtatDesLieuxPdfDef(d){
       return {
         margin: [55, 25, 55, 0],
         columns: [
-          { text: 'ST EVENTS', color: NAVY, fontSize: 9, bold: true, characterSpacing: 3, width: '*' },
+          { text: 'VILLA MANDALIKA', color: NAVY, fontSize: 9, bold: true, characterSpacing: 3, width: '*' },
           { text: 'État des lieux & inventaire', color: SOFT, fontSize: 8, italics: true, alignment: 'right', width: 'auto' }
         ]
       };
