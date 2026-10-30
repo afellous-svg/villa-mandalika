@@ -11774,7 +11774,7 @@ async function pushToCloud(){
   try {
     const payload = buildCloudPayload();
     const body = {
-      description: "ST EVENTS — données synchronisées (v" + payload.version + ")",
+      description: "Villa Mandalika — données synchronisées (v" + payload.version + ")",
       files: { [SYNC_FILENAME]: { content: JSON.stringify(payload, null, 2) } }
     };
     let resp;
@@ -12017,7 +12017,7 @@ async function applyInviteFromHash(){
     card.className = "auth-card";
     card.id = "authInviteCard";
     card.innerHTML =
-      '<h1>🏡 ST EVENTS</h1>' +
+      '<h1>🏡 Villa Mandalika</h1>' +
       '<p class="auth-sub">⏳ Connexion à l\'équipe en cours…</p>' +
       '<div style="text-align:center;color:var(--muted);font-size:12px;line-height:1.6">' +
         'Récupération de tes calendriers, contrats et utilisateurs depuis le cloud.<br>' +
