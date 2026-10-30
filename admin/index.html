@@ -3807,7 +3807,7 @@ $("genBtn").addEventListener("click", () => {
     try{ data._formSnapshot = (typeof captureContractForm === "function") ? captureContractForm() : null; }catch(_){}
     const docDef = buildContratPdfDef(data);
     const safeName = data.nom.replace(/[^A-Za-z0-9 _\-]/g,"").replace(/\s+/g,"_") || "Preneur";
-    const fileName = `Contrat_ST-EVENTS_${safeName}_${data.date_debut.replace(/\//g,"-")}.pdf`;
+    const fileName = `Contrat_Villa-Mandalika_${safeName}_${data.date_debut.replace(/\//g,"-")}.pdf`;
     const pdfDocGen = pdfMake.createPdf(docDef);
     // Génère un Blob qu'on va prévisualiser dans la modal (au lieu de télécharger direct)
     pdfDocGen.getBlob(blob => {
@@ -3969,7 +3969,7 @@ $("genBtn").addEventListener("click", () => {
         // ===== Génère AUSSI un PDF État des lieux + inventaire, en parallèle =====
         try {
           const edlDef = buildEtatDesLieuxPdfDef(data);
-          const edlFileName = `EtatDesLieux_ST-EVENTS_${safeName}_${data.date_debut.replace(/\//g,"-")}.pdf`;
+          const edlFileName = `EtatDesLieux_Villa-Mandalika_${safeName}_${data.date_debut.replace(/\//g,"-")}.pdf`;
           const edlPdf = pdfMake.createPdf(edlDef);
           edlPdf.getBase64(edlB64 => {
             b.contracts = b.contracts.filter(c => c && c.filename !== edlFileName);
@@ -5875,7 +5875,7 @@ function buildEtatDesLieuxPdfDef(d){
 
   // Bloc de signature pour l'inventaire
   c.push({
-    text: 'Cet inventaire a été établi contradictoirement entre les parties à l\'entrée des lieux. Toute anomalie constatée devra être signalée par écrit à ST EVENTS dans les 24 heures suivant l\'arrivée. À la sortie, un état des lieux comparatif sera réalisé.',
+    text: 'Cet inventaire a été établi contradictoirement entre les parties à l\'entrée des lieux. Toute anomalie constatée devra être signalée par écrit à Villa Mandalika dans les 24 heures suivant l\'arrivée. À la sortie, un état des lieux comparatif sera réalisé.',
     color: SOFT, fontSize: 9, italics: true, alignment: 'justify', margin: [0, 18, 0, 16]
   });
   c.push({
@@ -5903,7 +5903,7 @@ function buildEtatDesLieuxPdfDef(d){
   });
 
   return {
-    info: { title: `État des lieux ST EVENTS — ${d.nom}`, author: 'ST EVENTS' },
+    info: { title: `État des lieux Villa Mandalika — ${d.nom}`, author: 'Villa Mandalika' },
     content: c,
     defaultStyle: { fontSize: 10, alignment: 'justify', lineHeight: 1.45, color: '#2a3344' },
     pageMargins: [55, 65, 55, 75],
