@@ -5400,7 +5400,7 @@ function buildContratPdfDef(d){
 
   const bailleur = d.bailleur || { forme:'SASU', siret:'', adresse:'60 rue de Bellechasse, 75007 Paris' };
   c.push({ text: 'Le Bailleur', color: NAVY, bold: true, fontSize: 11, margin: [0, 0, 0, 4] });
-  c.push(field('Société', 'ST EVENTS'));
+  c.push(field('Société', 'Villa Mandalika'));
   c.push(field('Siège social', bailleur.adresse || '60 rue de Bellechasse, 75007 Paris'));
   if(bailleur.siret) c.push(field('SIRET', bailleur.siret));
   c.push(field('Téléphone', '06 61 05 96 20 / 06 47 11 19 63'));
@@ -5656,7 +5656,7 @@ function buildContratPdfDef(d){
   c.push({ text: [{ text: 'Le dépôt couvre notamment : ', bold: true, color: NAVY }, "dégradations, nuisances, intervention des forces de l'ordre, nettoyage exceptionnel, non-respect du règlement de copropriété."] });
 
   c.push(...articleHeader(nextArt++, 'Assurances'));
-  c.push("La RC Pro ST EVENTS pourra couvrir toute problématique à hauteur de sa couverture contractuelle.");
+  c.push("La RC Pro Villa Mandalika pourra couvrir toute problématique à hauteur de sa couverture contractuelle.");
 
   // ========== SIGNATURES ==========
   c.push({ text: ' ', margin: [0, 12, 0, 0], pageBreak: 'before' });
@@ -5666,7 +5666,7 @@ function buildContratPdfDef(d){
   c.push({
     columns: [
       { stack: [
-          { text: 'POUR ST EVENTS', color: GOLD, fontSize: 8, bold: true, characterSpacing: 2, alignment: 'center' },
+          { text: 'POUR VILLA MANDALIKA', color: GOLD, fontSize: 8, bold: true, characterSpacing: 2, alignment: 'center' },
           { text: 'Le Bailleur', color: SOFT, fontSize: 9, italics: true, alignment: 'center', margin: [0, 2, 0, 0] },
           { canvas: [ { type:'rect', x:0, y:60, w:200, h:0.5, color: NAVY } ], margin: [0, 6, 0, 0], alignment: 'center' },
           { text: 'Signature précédée de « Lu et approuvé »', color: SOFT, fontSize: 7, alignment: 'center', italics: true, margin: [0, 70, 0, 0] }
@@ -5881,7 +5881,7 @@ function buildEtatDesLieuxPdfDef(d){
   c.push({
     columns: [
       { stack: [
-          { text: 'POUR ST EVENTS', color: GOLD, fontSize: 8, bold: true, characterSpacing: 2, alignment: 'center' },
+          { text: 'POUR VILLA MANDALIKA', color: GOLD, fontSize: 8, bold: true, characterSpacing: 2, alignment: 'center' },
           { text: 'État des lieux entrée', color: SOFT, fontSize: 9, italics: true, alignment: 'center', margin: [0, 2, 0, 30] },
           { canvas: [ { type:'rect', x:0, y:0, w:200, h:0.5, color: NAVY } ], alignment: 'center' },
           { text: 'Signature + Date', color: SOFT, fontSize: 7, alignment: 'center', italics: true, margin: [0, 4, 0, 0] }
