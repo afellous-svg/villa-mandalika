@@ -11368,14 +11368,14 @@ async function resetUserPassword(userId){
         const raw = buildGmailMessage({
           from: gmailCfg.account || "stevents1912@gmail.com",
           to: target.email,
-          subject: "ST EVENTS — Réinitialisation de votre mot de passe",
+          subject: "Villa Mandalika — Réinitialisation de votre mot de passe",
           bodyText: "Bonjour " + target.name + ",\n\n" +
-            "Votre mot de passe sur l'application ST EVENTS a été réinitialisé par l'administrateur.\n\n" +
+            "Votre mot de passe sur l'application Villa Mandalika a été réinitialisé par l'administrateur.\n\n" +
             "Nouveau mot de passe : " + newPwd + "\n\n" +
             "Connectez-vous à : https://stevents-app.pages.dev\n" +
             "Identifiant : " + target.username + "\n\n" +
             "Pensez à demander à l'admin de modifier ce mot de passe après votre connexion si vous le souhaitez.\n\n" +
-            "— L'équipe ST EVENTS"
+            "— L'équipe Villa Mandalika"
         });
         const r = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages/send", {
           method: "POST",
