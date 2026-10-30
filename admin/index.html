@@ -8955,7 +8955,7 @@ $("csMailBtn").addEventListener("click", () => {
     const d = currentContractData || {};
     const rawEmail = (typeof getClientEmail === "function" ? getClientEmail() : "") || (d.email || "").split(/[,;\/]/)[0].trim();
     const greeting = (typeof buildGreeting === "function") ? buildGreeting(d.nom) : "Bonjour";
-    const subject = "Votre contrat ST EVENTS — version définitive contresignée";
+    const subject = "Votre contrat Villa Mandalika — version définitive contresignée";
     const body = greeting + ",\n\n" +
       "Suite à la réception de votre contrat signé et du règlement, j'ai le plaisir de vous adresser la version définitive du contrat, contresignée par mes soins.\n\n" +
       "Votre réservation pour la Villa Mandalika" + (d.date_debut ? " du " + d.date_debut + (d.date_fin && d.date_fin !== d.date_debut ? " au " + d.date_fin : "") : "") + " est désormais officiellement validée.\n\n" +
@@ -8969,7 +8969,7 @@ $("csMailBtn").addEventListener("click", () => {
         to: rawEmail,
         subject: subject,
         body: body,
-        attachInfo: "📎 Pièce jointe : " + (cs.fileName || "contrat-contresigne.pdf") + "  ·  ✨ Signature ST EVENTS ajoutée automatiquement"
+        attachInfo: "📎 Pièce jointe : " + (cs.fileName || "contrat-contresigne.pdf") + "  ·  ✨ Signature Villa Mandalika ajoutée automatiquement"
       });
     }
   }, 250);
@@ -8986,7 +8986,7 @@ $("csWhatsBtn").addEventListener("click", () => {
     const greeting = (typeof buildGreeting === "function") ? buildGreeting(d.nom) : "Bonjour";
     const defaultMsg = greeting + ", voici le contrat de location définitif (contresigné) pour votre réservation à la Villa Mandalika" +
       (d.date_debut ? " du " + d.date_debut + (d.date_fin && d.date_fin !== d.date_debut ? " au " + d.date_fin : "") : "") +
-      ". 📎 PDF en pièce jointe. Merci pour votre confiance ! — ST EVENTS";
+      ". 📎 PDF en pièce jointe. Merci pour votre confiance ! — Villa Mandalika";
     if(typeof showInlineMailPreview === "function"){
       showInlineMailPreview({
         mode: "whatsapp",
@@ -9309,7 +9309,7 @@ if(cfSubmitBtn){
     $("cf_shareInstructions").innerHTML =
       "🟢 <strong>Comment envoyer :</strong><br>" +
       "1. Cliquez « <strong>Télécharger le fichier</strong> » — il atterrit dans votre dossier Téléchargements.<br>" +
-      "2. Cliquez « <strong>Ouvrir WhatsApp</strong> » — un message tout prêt s'affiche pour ST EVENTS.<br>" +
+      "2. Cliquez « <strong>Ouvrir WhatsApp</strong> » — un message tout prêt s'affiche pour Villa Mandalika.<br>" +
       "3. Dans WhatsApp, ajoutez le fichier <em>" + cfLastFilename + "</em> en pièce jointe (📎 → Document) et envoyez.";
 
     $("cf_shareBox").scrollIntoView({behavior:"smooth", block:"center"});
@@ -9535,7 +9535,7 @@ function buildPropositionSeed(){
       if(!link) return;
       const titre = ($("prop_title") && $("prop_title").value.trim()) || "votre réservation à la Villa Mandalika";
       const subject = "Votre dossier de réservation — Villa Mandalika";
-      const body = "Bonjour,\n\nPour finaliser " + titre + ", merci de compléter votre dossier en ligne (identité, adresse, pièce d'identité et justificatif de domicile) en cliquant sur ce lien :\n\n" + link + "\n\nUne fois rempli, vous recevrez les instructions pour nous renvoyer votre dossier.\n\nMerci et à bientôt,\nST EVENTS — Villa Mandalika";
+      const body = "Bonjour,\n\nPour finaliser " + titre + ", merci de compléter votre dossier en ligne (identité, adresse, pièce d'identité et justificatif de domicile) en cliquant sur ce lien :\n\n" + link + "\n\nUne fois rempli, vous recevrez les instructions pour nous renvoyer votre dossier.\n\nMerci et à bientôt,\nVilla Mandalika";
       // Si Gmail connecté → zone d'aperçu inline ; sinon mailto
       if(typeof isGmailConnected === "function" && isGmailConnected() && typeof showInlineMailPreview === "function"){
         showInlineMailPreview({ mode:"gmail", title:"📧 Envoyer le formulaire au client", to:"", subject, body, attachInfo:"Aucune pièce jointe — juste le lien" });
